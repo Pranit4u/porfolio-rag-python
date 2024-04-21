@@ -1,6 +1,10 @@
 pypdf
 langchain
-chromadb # Vector storage
+chromadb
 pytest
-!pip install llama-cpp-python \
-  --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+uvicorn
+python-multipart
+fastapi
+requests
+python-dotenv
+llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
