@@ -1,10 +1,7 @@
-from langchain_community.embeddings.ollama import OllamaEmbeddings
-from langchain_community.embeddings.bedrock import BedrockEmbeddings
-
+from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 
 def get_embedding_function():
-    embeddings = BedrockEmbeddings(
-        credentials_profile_name="default", region_name="us-east-1"
+    embeddings = HuggingFaceInferenceAPIEmbeddings(
+        api_key="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", model_name="sentence-transformers/all-MiniLM-l6-v2"
     )
-    # embeddings = OllamaEmbeddings(model="nomic-embed-text")
     return embeddings
